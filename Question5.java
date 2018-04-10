@@ -30,11 +30,16 @@ public class Question5 {
         System.out.println("Enter money eg: 1.00");
         double money = sc.nextDouble();
         
-        System.out.println("Delivered product ->" + products(prod_index));
+        if(prod_index>=0 && prod_index<=4 && money>=1.0) {
         
-        double amount = prices(prod_index);
-        
-        System.out.println("Delivered Change ->" + (money-amount));
+            System.out.println("Delivered product ->" + products(prod_index));
+
+            double amount = prices(prod_index);
+
+            System.out.println("Delivered Change ->" + (money-amount));
+        }
+        else
+            System.out.println("Product could not be processed... invalid input");
     }
     
     public static double prices(int index) {
